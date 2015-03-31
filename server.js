@@ -50,6 +50,10 @@ app.use(session({
 }));
 // -> req.session
 
+// Passport:
+app.use(passport.initialize());
+app.use(passport.session());
+
 var User = require('./db/models/user').User;
 passport.use(new LocalStrategy(
     function(username, password, done) {
@@ -66,6 +70,18 @@ passport.use(new LocalStrategy(
         });
     }
 ));
+
+passport.serializeUser(function(user, done) {
+    done(null, user.id);
+});
+
+passport.deserializeUser(function(id, done) {
+    User.findById(id, function(err, user) {
+        if (err) return done(err);
+        done(null, user);
+    });
+});
+
 
 
 /*
