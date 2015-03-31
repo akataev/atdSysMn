@@ -1,0 +1,23 @@
+{
+    "host": "127.0.0.1",
+    "port": "3030",
+    "mongoose": {
+        "uri": "mongodb://localhost/atddb",
+        "options": {
+            "server": {
+                "socketOptions": {
+                    "keepAlive": 1
+                }
+            }
+        }
+    },
+    "session": {
+        "secret": "keyboard cat",
+        "key": "sid",
+        "cookie": {
+            "path": "/",
+            "httpOnly": true,
+            "maxAge": null
+        }
+    }
+}

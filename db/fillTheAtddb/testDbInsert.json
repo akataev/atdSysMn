@@ -1,0 +1,364 @@
+﻿{
+    "permissions": [
+        {
+            "name": "read",
+            "description": "..."
+        },
+        {
+            "name": "write",
+            "description": "..."
+        },
+        {
+            "name": "check",
+            "description": "..."
+        },
+        { 
+            "name": "test",
+            "description": "..."
+        }
+    ],
+
+    "roles": [
+        {
+            "name": "tester",
+            "permissions": [ "read", "write", "check", "test" ]
+        },
+        {
+            "name": "teacher",
+            "permissions": [ "read", "write", "check" ]
+        },
+        {
+            "name": "elder",
+            "permissions": [ "read", "write" ]
+        }
+    ],
+
+    "users": [
+        {
+            "username": "tester",
+            "password": "secret",
+            "role": "tester"
+        },
+        {
+            "username": "aborod",
+            "password": "tchrpass",
+            "role": "teacher"
+        },
+        {
+            "username": "kataev",
+            "password": "kataevpass",
+            "role": "elder"
+        }
+    ],
+
+    "specialities": [
+        {
+            "name": "ИСИТ"
+        },
+        {
+            "name": "ПРИМАТ"
+        }
+    ],
+
+    "groups": [
+        {
+            "number": "22505",
+            "speciality": "ИСИТ"
+        },
+        {
+            "number": "22506",
+            "speciality": "ИСИТ"
+        },
+        {
+            "number": "22503",
+            "speciality": "ПРИМАТ"
+        },
+        {
+            "number": "22504",
+            "speciality": "ПРИМАТ"
+        }
+    ],
+
+    "students": [
+        {
+            "name": "Александр",
+            "surname": "Катаев",
+            "group": "22505",
+            "isElder": true
+        },
+        {
+            "name": "Александр",
+            "surname": "Буйко",
+            "group": "22505",
+            "isElder": false
+        },
+        {
+            "name": "Евгений",
+            "surname": "Олонов",
+            "group": "22505",
+            "isElder": false
+        },
+        {
+            "name": "Денис",
+            "surname": "Докторов",
+            "group": "22505",
+            "isElder": false
+        },
+        {
+            "name": "Наталья",
+            "surname": "Бородинова",
+            "group": "22505",
+            "isElder": false
+        },
+        {
+            "name": "Иван",
+            "surname": "Митофанов",
+            "group": "22505",
+            "isElder": false
+        },
+        {
+            "name": "Анастасия",
+            "surname": "Назарова",
+            "group": "22505",
+            "isElder": false
+        },
+        {
+            "name": "Виктор",
+            "surname": "Лонский",
+            "group": "22505",
+            "isElder": false
+        },
+        {
+            "name": "Мария",
+            "surname": "Ицкарь",
+            "group": "22505",
+            "isElder": false
+        },
+        {
+            "name": "Мария",
+            "surname": "Колчина",
+            "group": "22505",
+            "isElder": false
+        },
+        {
+            "name": "Иван",
+            "surname": "Королев",
+            "group": "22505",
+            "isElder": false
+        }
+    ],
+
+    "chairs": [
+        {
+            "name": "ИМО"
+        },
+        {
+            "name": "ПМИК"
+        }
+    ],
+
+    "teachers": [
+        {
+            "name": "Александр",
+            "surname": "Бородин",
+            "chair": "ИМО"
+        },
+        {
+            "name": "Константинов",
+            "surname": "Константин",
+            "chair": "ПМИК"
+        }
+    ],
+
+    "subjects": [
+        {
+            "name": "C++",
+            "type": "лекция",
+            "teacher": {
+                "name": "Александр",
+                "surname": "Бородин"
+            },
+            "groups": [ "22505", "22506" ]
+        },
+        {
+            "name": "Администрирование ИС",
+            "type": "практика",
+            "teacher": {
+                "name": "Константинов",
+                "surname": "Константин"
+            },
+            "groups": [ "22503", "22504" ]
+        }
+    ],
+
+    "attendances": [
+        {
+            "subject": "C++",
+            "group": "22505",
+            "atdStudents": [
+                {
+                    "name": "Александр",
+                    "surname": "Катаев"
+                },
+                {
+                    "name": "Александр",
+                    "surname": "Буйко"
+                },
+                {
+                    "name": "Евгений",
+                    "surname": "Олонов"
+                },
+                {
+                    "name": "Денис",
+                    "surname": "Докторов"
+                },
+                {
+                    "name": "Анастасия",
+                    "surname": "Назарова"
+                },
+                {
+                    "name": "Виктор",
+                    "surname": "Лонский"
+                },
+                {
+                    "name": "Мария",
+                    "surname": "Ицкарь"
+                },
+                {
+                    "name": "Мария",
+                    "surname": "Колчина"
+                },
+                {
+                    "name": "Иван",
+                    "surname": "Королев"
+                }
+            ],
+            "elderCanEdit": false
+        },
+        {
+            "subject": "C++",
+            "group": "22505",
+            "atdStudents": [
+                {
+                    "name": "Александр",
+                    "surname": "Катаев"
+                },
+                {
+                    "name": "Александр",
+                    "surname": "Буйко"
+                },
+                {
+                    "name": "Евгений",
+                    "surname": "Олонов"
+                },
+                {
+                    "name": "Денис",
+                    "surname": "Докторов"
+                },
+                {
+                    "name": "Иван",
+                    "surname": "Митофанов"
+                },
+                {
+                    "name": "Анастасия",
+                    "surname": "Назарова"
+                },
+                {
+                    "name": "Виктор",
+                    "surname": "Лонский"
+                },
+                {
+                    "name": "Мария",
+                    "surname": "Ицкарь"
+                },
+                {
+                    "name": "Мария",
+                    "surname": "Колчина"
+                }
+            ],
+            "elderCanEdit": false
+        },
+        {
+            "subject": "C++",
+            "group": "22505",
+            "atdStudents": [
+                {
+                    "name": "Александр",
+                    "surname": "Катаев"
+                },
+                {
+                    "name": "Александр",
+                    "surname": "Буйко"
+                },
+                {
+                    "name": "Евгений",
+                    "surname": "Олонов"
+                },
+                {
+                    "name": "Наталья",
+                    "surname": "Бородинова"
+                },
+                {
+                    "name": "Иван",
+                    "surname": "Митофанов"
+                },
+                {
+                    "name": "Анастасия",
+                    "surname": "Назарова"
+                },
+                {
+                    "name": "Мария",
+                    "surname": "Колчина"
+                },
+                {
+                    "name": "Иван",
+                    "surname": "Королев"
+                }
+            ],
+            "elderCanEdit": false
+        },
+        {
+            "subject": "C++",
+            "group": "22505",
+            "atdStudents": [
+                {
+                    "name": "Александр",
+                    "surname": "Катаев"
+                },
+                {
+                    "name": "Александр",
+                    "surname": "Буйко"
+                },
+                {
+                    "name": "Денис",
+                    "surname": "Докторов"
+                },
+                {
+                    "name": "Наталья",
+                    "surname": "Бородинова"
+                },
+                {
+                    "name": "Иван",
+                    "surname": "Митофанов"
+                },
+                {
+                    "name": "Виктор",
+                    "surname": "Лонский"
+                },
+                {
+                    "name": "Мария",
+                    "surname": "Ицкарь"
+                },
+                {
+                    "name": "Мария",
+                    "surname": "Колчина"
+                },
+                {
+                    "name": "Иван",
+                    "surname": "Королев"
+                }
+            ],
+            "elderCanEdit": true
+        }
+    ]
+}
