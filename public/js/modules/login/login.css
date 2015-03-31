@@ -1,0 +1,181 @@
+@charset"utf-8";
+ html, body {
+    margin: 0;
+    padding: 0;
+    background: #eee;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 12pt;
+}
+.page-container {
+    background: #ddd;
+    height: 480px;
+    max-width: 900px;
+    /* for login page */
+    min-height: 550px;
+    margin: 50px auto;
+    box-shadow: 0px 0px 2px #ccc;
+}
+.header, .footer {
+    background: #fff;
+    width: 100%;
+    min-height: 45px;
+    clear: both;
+    box-sizing: border-box;
+    margin-bottom:-1px;
+    /* for iPad */
+}
+.header {
+    display: none;
+    /* for login page */
+}
+.footer {
+    text-align: center;
+    /* for login page */
+    background: none;
+    padding-top: 10px;
+}
+.footer a {
+    font-size: 9pt;
+    display: inline-block;
+    margin: 0 2px;
+}
+.footer p {
+    margin: 5px 0px 0px 0px;
+    font-size: 7pt;
+}
+.left-sidebar, .right-sidebar {
+    /* height: calc(100% - 90px); */
+    height: 100%;
+    /* for login page */
+    overflow: auto;
+    box-sizing: border-box;
+    padding: 10px;
+    padding-top: 50px;
+    margin-bottom:-1px;
+    /* for iPad */
+}
+.left-sidebar {
+    background: #fff;
+    float: left;
+    width: 70%;
+}
+.right-sidebar {
+    background: #669;
+    background: #69c;
+    color: #fff;
+    float: right;
+    width: 30%;
+    box-sizing: border-box;
+    padding-top: 70px;
+    padding-bottom: 0px;
+    border-left: 1px solid #ccc;
+    /* separator */
+}
+a:link {
+    color: #669;
+}
+a:hover {
+    color: #699;
+}
+/************************
+************************/
+ .petrsu-logo {
+    background: #fff;
+    box-sizing: border-box;
+    width: 100px;
+    height: 100px;
+    margin: 30px auto 20px auto;
+    padding-top: 3px;
+    text-align: center;
+}
+.left-sidebar h1 {
+    font-size: 24pt;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.left-sidebar ul, .right-sidebar form p {
+    font-size: 10pt;
+}
+.left-sidebar ul {
+    margin-top: 90px;
+    display: none;
+}
+.left-sidebar ul li {
+    display: block;
+    width: calc(100% + 60px);
+    height: auto;
+    margin-left: -50px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    overflow: hidden;
+    background: #cc9;
+    margin-bottom: 5px;
+    color: #336;
+}
+.left-sidebar ul li p:first-child {
+    text-align: left;
+    padding-left: 20px;
+}
+#form-title, .right-sidebar form > p {
+    text-align: center;
+}
+#login_help {
+    margin: 0px;
+    margin-top: 110px;
+    padding-left: 15px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    font-size: 8pt;
+    color: #cc9;
+    color: #fff;
+}
+.right-sidebar .form-input {
+    width: 180px;
+    height: 25px;
+    border: none;
+    border-radius: 1px;
+}
+.right-sidebar button {
+    background: #cc9;
+    background: #6c9;
+    width: 100px;
+    height: 25px;
+    border: 1px solid #fff;
+    border-radius: 1px;
+    font-family: Verdana, Arial, sans-serif;
+    color: #336;
+    color: #fff;
+    font-size: 10pt;
+}
+.right-sidebar button:hover {
+    /* box-shadow: 1px 1px 2px #333; */
+    background: #396;
+    cursor: pointer;
+}
+.right-sidebar button:active {
+    /* background: #396; */
+    padding: 0;
+    box-shadow: inset 0px 1px 2px 0px #666;
+}
+@media only screen and (max-width: 800px) {
+    .page-container {
+        margin: 0px;
+    }
+    .left-sidebar, .right-sidebar {
+        width: 100%;
+        height: auto;
+        clear: both;
+    }
+    .left-sidebar ul li {
+        width: calc(100% - 40px);
+    }
+    .right-sidebar {
+        border: 0px;
+        border-top: 1px solid #ccc;
+    }
+    #login_help {
+        margin-bottom: 20px;
+    }
+}

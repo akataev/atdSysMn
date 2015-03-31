@@ -1,0 +1,33 @@
+<div class="page-container">
+    <div class="header"></div><!-- 
+ --><div class="left-sidebar">
+        <div class="petrsu-logo">
+            <img src="http://ru.ict4um.edu.ru/images/material-thumb/80-0.jpg" />
+        </div>
+        <h1>Автоматизированная система<br>учета посещения занятий</h1>
+    </div><!-- 
+ --><div class="right-sidebar">
+        <p id="form-title">Войти</p>
+        <form action="#">
+            <p>
+                <input class="form-input" type="email" name="email" placeholder="Почта" required />
+            </p>
+            <p>
+                <input class="form-input" type="password" name="password" placeholder="Пароль" required />
+            </p>
+            <p>
+                <input type="checkbox" id="remember" />
+                <label for="remember">Запомнить</label>
+            </p>
+            <p>
+                <button id="loginBtn" type="submit" value="login">Войти</button>
+            </p>
+        </form>
+        <p id="login_help">* Если вы по каким-то причинам не можете войти в систему, рекомендуем вам обратиться к администратору через ссылку "Обратная связь" в самом низу страницы.</p>
+    </div><!-- 
+ --><div class="footer">
+        <a href="http://petrsu.ru">Сайт ПетрГУ</a>
+        <a href="#feedback">Обратная связь</a>
+        <p>&copy; ПетрГУ, 2014</p>
+    </div>
+</div>

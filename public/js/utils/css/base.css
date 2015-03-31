@@ -1,0 +1,455 @@
+/*********************** GENERAL-----START
+************************/
+@charset"utf-8";
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #eee;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 12pt;
+}
+.page-container {
+    box-sizing: border-box;
+    background: #ddd;
+    max-width: 1070px;
+    height: 611px;
+    min-height: 611px;
+    margin: 0px auto;
+    box-shadow: 0px 0px 2px #ccc;
+}
+.header, .footer {
+    box-sizing: border-box;
+    width: 100%;
+    height: 46px;
+    clear: both;
+}
+.header {
+    background: #69c;
+    padding: 8px 15px;
+    overflow: hidden;
+}
+.footer {
+    background: none;
+    text-align: center;
+    padding-top: 10px;
+}
+.footer a {
+    font-size: 9pt;
+    display: inline-block;
+    margin: 0 2px;
+}
+.footer p {
+    margin: 5px 0px 8px 0px;
+    font-size: 7pt;
+}
+.left-sidebar, .right-sidebar {
+    box-sizing: border-box;
+    height: calc(100% - 46px);
+
+    overflow: auto;
+}
+.left-sidebar {
+    background: #fff;
+    float: left;
+    width: 70%;
+    padding: 15px;
+}
+.right-sidebar {
+    background: #fff;
+    float: right;
+    width: 30%;
+}
+.right-inner {
+    background: #fff;
+    box-sizing: inherit;
+    float:left;
+    width: 100%;
+    height: calc(100% - 30px);
+    margin: 15px 0px;
+    padding-left: 14px;
+    padding-right: 15px;
+    border-left: 1px solid #ccc; /* separator */
+    
+    color: #333;
+}
+
+/*********************** GENERAL-----END
+************************/
+
+/*********************** HEADER-----START
+************************/
+.header .left-menu {
+    background: none;
+    float: left;
+    box-sizing: border-box;
+    min-width: calc(30% - 30px);
+    max-width: 350px;
+    height: 30px;
+    padding-top: 3px;
+    
+    overflow: hidden; /* in russian: чтобы не уезжало вниз */
+    
+    color: #fff;
+}
+.left-menu .fa-bars {
+    vertical-align: middle;
+    text-decoration: none;
+    color: #fff;
+}
+.left-menu .fa-bars:hover {
+    color: #fc6;
+}
+#profile_menu {
+    position: absolute;
+    display: none;
+    margin-top: 5px;
+    list-style-type: none;
+    border-width: 1px;
+    font-size: 10pt;
+}
+#profile_menu li {
+    background: #fff;
+    margin-left: -40px;
+    padding: 10px;
+    
+    color: #333;
+}
+
+#profile_menu li a {
+    color: #333;
+    text-decoration: none;
+}
+#profile_menu li:hover a {
+    color: #fff;
+}
+#profile_menu li:not(:first-child) {
+    border-width: 1px 0px 0px 0px;
+}
+#profile_menu, #profile_menu li:not(:first-child) {
+    border-style: solid;
+    border-color: #ccc;
+}
+#profile_menu li:hover {
+    background: #6c9;
+}
+
+.profile-name {
+    margin-left: 10px;
+    vertical-align: middle;
+    font-size: 12pt;
+}
+.header form {
+    box-sizing: border-box;
+    float: right;
+    min-width: 28%;
+}
+.header form input {
+    box-sizing: inherit;
+    float: left;
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-radius: 1px;
+    padding: 0px 25px 0px 5px;
+    
+    font-size: 10pt;
+    line-height: 1.2em;
+}
+.header form input:focus {
+    outline: none;
+    box-shadow: 0px 0px 10px #6c9;
+    border: 1px solid #69c;
+    border-radius: 1px;
+}
+.header form button {
+    background: #fff;
+    box-sizing: inherit;
+    float: right;
+    width: 20px;
+    height: 20px;
+    margin: 5px 5px 5px -35px;
+    border: none;
+    border-radius: 1px;
+    padding: 0px;
+}
+.header form button:hover {
+    cursor: pointer;
+}
+.header form button i {
+    color: #999;
+}
+/*********************** HEADER-----END
+************************/
+
+/*********************** LEFT-SIDEBAR-----START
+************************/
+.left-sidebar .some-info, .left-sidebar .some-data {
+    font-size: 10pt;
+    
+    overflow: hidden;
+}
+.left-sidebar .some-info {
+    background: #fff;
+    box-sizing: border-box;
+    width: 100%;
+    height: 35%;
+    
+    color: #333;
+}
+.left-sidebar .some-info .entity-img {
+    display: block;
+    float: left;
+    box-sizing: border-box;
+    width: 150px;
+    /*height: 100%;*/
+    height: 185px;
+    border-radius: 1px;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+.entity-info {
+    box-sizing: border-box;
+    float: left;
+    width: calc(100% - 150px);
+    height: 100%;
+    padding-left: 15px;
+}
+.left-sidebar .some-info .entity-title {
+    width: auto;
+    font-size: 12pt;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 600;
+}
+.left-sidebar .some-info .entity-property {
+    margin: 5px 0px;
+    font-size: 8pt;
+}
+.badge {
+    background: #eee;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    min-width: 50px;
+    min-height: 15px;
+    border-radius: 1px;
+    color: #666;
+    font-size: 8pt;
+    padding: 2px 5px;
+    text-align: center;
+    text-decoration: none;
+}
+.badge:hover {
+    background: #6c9;
+    color: #fff;
+}
+.left-sidebar .some-data {
+    background: #fff;
+    box-sizing: border-box;
+    width: 100%;
+    height: calc(65% - 10px);
+    margin-top: 10px;
+    overflow: hidden;
+    border-radius: 1px;
+}
+.some-data table {
+    /* width: 100%;
+    height: 100%; */
+    border-color: #fff;
+    border-collapse: collapse;
+}
+.some-data table th, .some-data table td {
+    box-sizing: border-box;
+    height: 50px;
+    border: 1px solid #ddd;
+    padding: 5px 0px;
+    text-align: center;
+}
+.some-data table th {
+    background: #eee;
+    border-bottom: 1px solid #ccc !important;
+    border-collapse: collapse;
+    overflow: hidden;
+    text-align: center;
+}
+/* .dataTables_scroll, .display .dataTable .no-footer, .dataTables_scrollBody {
+    overflow: scroll;
+} */
+
+.some-data table td {
+    color: #999;
+    /* cursor: pointer; */
+}
+.some-data table td span:first-child {
+    color: #333;
+}
+.some-data table td:hover, .some-data table td:hover span:first-child {
+    background: #f7f7f7;
+}
+.some-data table td .fa-chevron-right {
+    float: right;
+    margin-right: 20px;
+    margin-top: 3px;
+}
+.date {
+    margin-left: 30px;
+}
+.fa-th-list {
+    float: left;
+    margin-left: 20px;
+}
+.fa-plus, .fa-pencil {
+    float: right;
+    margin: 0px 20px;
+    
+}
+.fa-plus:hover {color: #6c9;}
+.fa-th-list:hover, .fa-pencil:hover {color: #69c;}
+.table-title {
+    margin-left: 70px;
+    color: #666;
+}
+.table-title:hover {
+    color: #999;
+}
+.fa-th-list, .fa-plus, .fa-pencil {
+    margin-top: 3px;
+    color: #666;
+    text-decoration: none;
+}
+/*********************** LEFT-SIDEBAR-----END
+************************/
+
+/*********************** RIGHT-SIDEBAR-----START
+************************/
+.stat-title {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.stat-property {
+    font-size: 10pt;
+}
+.gen-stat-img {
+    width: 100%;
+    height: 40%;
+}
+.av-att, .min-att, .max-att {
+    color: #000;
+}
+
+
+/*********************** RIGHT-SIDEBAR-----END
+************************/
+
+/*********************** FOOTER-----START
+************************/
+.footer a:link {
+    color: #669;
+}
+.footer a:hover {
+    color: #6c9;
+}
+/*********************** FOOTER-----END
+************************/
+
+/*********************** RESPONSIVE-----START
+************************/
+
+@media only screen and (max-width: 800px) {
+    .page-container {
+        margin: 0px;
+        height: 100%;
+    }
+    .left-sidebar, .right-sidebar {
+        width: 100%;
+        height: auto;
+        clear: both;
+    }
+    .left-sidebar ul li {
+        width: calc(100% - 40px);
+    }
+    .right-sidebar {
+        border: 0px;
+        border-top: 1px solid #ccc;
+    }
+    .right-inner {
+        border-left: none;
+        padding-left: 15px;
+    }
+    .header {
+        height: auto;
+    }
+    .header form {
+        width: 100%;
+        margin-left: 0px;
+    }
+    .header .left-menu {
+        min-width: 100%;
+        margin: 0px 0px 5px 0px;
+    }
+    
+    .left-sidebar .some-info .entity-img {
+        max-height: 29%;
+    }
+}
+
+/*********************** RESPONSIVE-----END
+************************/
+
+
+.dataTables_filter {
+    box-sizing: border-box;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    padding-top: 4px;
+}
+.dataTables_filter label {
+    /* display: none; */
+}
+.sorting_desc, .sorting_asc {
+    background: none !important;
+}
+.dataTables_info {
+    color: #333;
+}
+.dataTables_filter label input {
+    border: 1px solid #ccc;
+    border-radius: 1px;
+    width: 200px;
+    height: 25px;
+}
+
+.dataTables_filter label input:focus {
+    outline: none;
+    box-shadow: 0px 0px 2px #6c9;
+    border: 1px solid #69c;
+}
+
+.lol_red {
+    color: red !important;
+}
+
+
+
+#testRouting {
+    position: fixed;
+    background: #c54;
+    top: 200px;
+    left: 5px;
+    color: white;
+    font-size: 10pt;
+    height: 100px;
+}
+#testRouting a {
+    color: white;
+    font-size: 10pt;
+    margin-bottom: 40px;
+}
+#testRouting p {
+    margin: 0px;
+    padding: 0px;
+    height: 20px;
+    color: #c54;
+    background: #eee;
+}
