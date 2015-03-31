@@ -5,15 +5,15 @@ define(["app", "doTCompiler", "doT!./login",
 	
 	LoginView = Mn.ItemView.extend({
 
-		ui: {
-			"login": "#loginBtn" 
-		},
+		// ui: {
+		// 	"login": "#loginBtn" 
+		// },
 
-		behaviors: {
-			GoToProfile: {
-				message: "Welcome"
-			}
-		},
+		// behaviors: {
+		// 	GoToProfile: {
+		// 		message: "Welcome"
+		// 	}
+		// },
 
 		template: loginTemplate,
 
